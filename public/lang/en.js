@@ -38,6 +38,74 @@ export default {
       },  //japan
     },
   },
+  footer: {
+    section: [
+      {
+        brand: "Tay Do Steel",
+        address: "123 Industrial Street, Binh Thuy District, City. Can Tho",
+        phone: {
+          title: "Phone: ",
+          value: "+84 292 123 4567",
+        },
+        email: {
+          title: "Email: ",
+          value: "info@theptaydo.com"
+        }
+      },
+      {
+        brand: "VP of Material Workshop",
+        address: "27 Le Hong Phong, Tra An Ward, Binh Thuy District, City. Can Tho",
+        phone: {
+          title: "Phone: ",
+          value: "+84.796 65 65 65",
+        },
+        email: {
+          title: "Email: ",
+          value: "info@theptaydo.com"
+        }
+      },
+      {
+        brand: "Representative office in Can Tho",
+        address: "No. 44, CMT8, Cai Khe Ward, Ninh Kieu District, City. Can Tho",
+        phone: {
+          title: "Phone: ",
+          value: "+84.796 65 65 65",
+        },
+        email: {
+          title: "Email: ",
+          value: "info@theptaydo.com"
+        }
+      },
+      {
+        brand: "Representative office in HCMC",
+        address: "...",
+        phone: {
+          title: "Phone: ",
+          value: "+84.796 65 65 65",
+        },
+        email: {
+          title: "Email: ",
+          value: "info@theptaydo.com"
+        }
+      },
+    ],
+    cert: {
+      title: "Business Registration Certificate No: 1800156657",
+      dateOfPlace: "Date issued: 27/06/2008 - Issued by: Department of Planning and Investment of Can Tho City",
+      grant: "General Director: Huynh Trung Quang"
+    },
+    infor: {
+      title: "Follow Us",
+      description: "Connect with us on social media for the latest updates on the steel market.",
+    },
+    coppyright: {
+      brand: "Thep Tay Do",
+      title: "Copyright",
+      subTitle: "Copyright Registered",
+      developer: "Designed by "
+    },
+
+  },
 
   HomePage: {
     home: "Home",
@@ -110,8 +178,8 @@ export default {
           titles: "Mr "
         },
         {
-          name: "Da Den",
-          role: "Op moe moe moe osha",
+          name: "Anh Da Den",
+          role: "Uvuvwevwevwe Onyetenyevwe Ugwemubwem Osas",
           images: "https://th.bing.com/th/id/OIP.ueglsKxAkWD-4Bb_nc46IgHaHa?rs=1&pid=ImgDetMain",
           titles: "Mr "
         },
