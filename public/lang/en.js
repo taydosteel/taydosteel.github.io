@@ -42,7 +42,7 @@ export default {
     section: [
       {
         brand: "Tay Do Steel",
-        address: "123 Industrial Street, Binh Thuy District, City. Can Tho",
+        address: "123 Industrial Street, Binh Thuy District, Can Tho City",
         phone: {
           title: "Phone: ",
           value: "+84 292 123 4567",
@@ -53,8 +53,8 @@ export default {
         }
       },
       {
-        brand: "VP of Material Workshop",
-        address: "27 Le Hong Phong, Tra An Ward, Binh Thuy District, City. Can Tho",
+        brand: "Scrap Processing Workshop",
+        address: "27 Le Hong Phong, Tra An Ward, Binh Thuy District, Can Tho City",
         phone: {
           title: "Phone: ",
           value: "+84.796 65 65 65",
@@ -66,7 +66,7 @@ export default {
       },
       {
         brand: "Representative office in Can Tho",
-        address: "No. 44, CMT8, Cai Khe Ward, Ninh Kieu District, City. Can Tho",
+        address: "No. 44, CMT8, Cai Khe Ward, Ninh Kieu District, Can Tho City",
         phone: {
           title: "Phone: ",
           value: "+84.796 65 65 65",
@@ -77,7 +77,7 @@ export default {
         }
       },
       {
-        brand: "Representative office in HCMC",
+        brand: "Representative office in Ho Chi Minh city",
         address: "...",
         phone: {
           title: "Phone: ",
@@ -99,7 +99,7 @@ export default {
       description: "Connect with us on social media for the latest updates on the steel market.",
     },
     coppyright: {
-      brand: "Thep Tay Do",
+      brand: "Tay Do Steel",
       title: "Copyright",
       subTitle: "Copyright Registered",
       developer: "Designed by "
@@ -217,7 +217,7 @@ export default {
         },
       ]
     }
-    
+
 
 
 
