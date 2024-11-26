@@ -1279,79 +1279,257 @@ section,
 .clients .swiper-slide img:hover {
   transform: scale(1.1);
 }
+.clients-section {
+  padding: 50px 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+ 
+
+.clients-wrapper {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.client-slide {
+  min-width: 200px;
+  margin: 0 10px;
+ 
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.client-slide img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 
 /*--------------------------------------------------------------
 # News Section
 --------------------------------------------------------------*/
 /* Đặt CSS cho toàn bộ card */
-.card {
-  width: 300px; /* Chiều rộng cố định cho card */
-  height: 400px; /* Chiều cao cố định cho card */
-  overflow: hidden; /* Ẩn phần nội dung vượt quá */
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.home-news {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.news-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.news-main-content {
+  width: 800px;
+  flex: 3;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
-  border-radius: 8px; /* Bo góc card */
-  background-color: #fff;
+  gap: 20px;
 }
 
-/* Đặt CSS cho ảnh trong card */
-.card img {
-  width: 100%; /* Ảnh vừa với chiều rộng của card */
-  height: 50%; /* Chiều cao cố định cho ảnh, chiếm 50% chiều cao card */
-  object-fit: cover; /* Cắt ảnh nếu kích thước không đúng */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.news-large-post {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS cho phần thân của card */
-.card-body {
+.news-large-post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.news-large-post-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: #f1e4e4;
+ 
+  width: 100%;
+}
+.news-large-post-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .news-large-post-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Giới hạn chỉ một dòng khi màn hình nhỏ */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    font-size: 0.9rem; /* Giảm kích thước font một chút nếu cần */
+  }
+}
+
+@media (min-width: 769px) {
+  .news-large-post-title {
+    display: block;
+    -webkit-line-clamp: unset; /* Hiển thị đầy đủ khi màn hình lớn */
+    white-space: normal; /* Không giới hạn số dòng */
+  }
+}
+
+.news-large-post-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.news-grid-posts {
+  display: flex;
+  gap: 10px;
+}
+
+.news-grid-post {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-grid-post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.news-grid-post-content {
   padding: 15px;
+}
+
+.news-grid-post-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .news-grid-post-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Giới hạn chỉ một dòng khi màn hình nhỏ */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    font-size: 0.9rem; /* Giảm kích thước font một chút nếu cần */
+  }
+}
+
+@media (min-width: 769px) {
+  .news-grid-post-title {
+    display: block;
+    -webkit-line-clamp: unset; /* Hiển thị đầy đủ khi màn hình lớn */
+    white-space: normal; /* Không giới hạn số dòng */
+  }
+}
+
+.news-grid-post-meta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.news-sidebar {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 50%; /* Chiếm 50% còn lại của card */
-  text-align: center;
-  overflow: hidden; /* Ẩn nội dung vượt quá chiều cao */
+  gap: 20px;
 }
 
-/* CSS cho tiêu đề */
-.card-title {
-  font-size: 1.1em;
+.news-small-post {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng hover */
+}
+
+.news-small-post:hover {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.news-small-post img {
+  width: 80px; /* Tăng kích thước ảnh đại diện */
+  height: 80px;
+  border-radius: 8px; /* Có thể thay đổi thành 50% nếu muốn ảnh tròn */
+  object-fit: cover;
+}
+
+.news-small-post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.news-small-post-title {
+  font-size: 1rem;
   font-weight: bold;
-  margin: 0 0 8px; /* Khoảng cách giữa tiêu đề và văn bản */
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; /* Giới hạn dòng nếu tiêu đề quá dài */
+  white-space: nowrap;
 }
 
-/* CSS cho đoạn văn bản trong card */
-.card-text {
-  font-size: 0.9em;
-  margin: 0 0 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box; 
-  -webkit-box-orient: vertical;
-  height: 3em; /* Đảm bảo chiều cao cố định */
+@media (max-width: 768px) {
+  .news-small-post-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Giới hạn chỉ một dòng khi màn hình nhỏ */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    font-size: 0.9rem; /* Giảm kích thước font một chút nếu cần */
+  }
 }
 
-/* CSS cho nút liên kết */
-.primary {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 4px;
-  
+@media (min-width: 769px) {
+  .news-small-post-title {
+    display: block;
+    -webkit-line-clamp: unset; /* Hiển thị đầy đủ khi màn hình lớn */
+    white-space: normal; /* Không giới hạn số dòng */
+  }
 }
 
-.primary:hover {
-  background-color: #d0ebff; /* Đổi màu khi hover */
-}
 
+.news-small-post-meta {
+  font-size: 0.85rem; /* Tăng kích thước font cho meta */
+  color: #555;
+  margin-top: 4px;
+}
 
 /*--------------------------------------------------------------
 # Services Section
@@ -2224,90 +2402,8 @@ section,
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Keyframes for slide-in animations */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Performance optimization for animations */
-.portfolio .h-entry {
-  will-change: transform, opacity;
-  opacity: 0;
-  /* Start fully hidden */
-  transform: translateY(30px);
-  /* Downward translation */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  /* Smooth transition */
-}
-
-.portfolio .h-entry.visible {
-  opacity: 1;
-  /* Fully visible */
-  transform: translateY(0);
-  /* Reset translation */
-}
-
-/* Slide-in animations */
-.portfolio .h-entry.left-slide {
-  animation: slideInLeft 0.8s forwards;
-}
-
-.portfolio .h-entry.right-slide {
-  animation: slideInRight 0.8s forwards;
-}
-
-/* Delay animations for sequential effect */
-.portfolio .h-entry:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.portfolio .h-entry:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.portfolio .h-entry:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.portfolio .h-entry:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.portfolio .h-entry {
-  opacity: 0;
-  /* Start fully hidden */
-  transform: translateY(30px);
-  /* Downward translation */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  /* Smooth transition */
-}
-
-.portfolio .h-entry.visible {
-  opacity: 1;
-  /* Fully visible */
-  transform: translateY(0);
-  /* Reset translation */
-}
+ 
+ 
 
 
 
@@ -2515,5 +2611,23 @@ ul {
   #portfolio .col-md-4 {
     flex: 1 1 100%;
     margin-bottom: 20px;
+  } 
+}
+/* products */
+/* Trạng thái ban đầu của carousel và product-details */
+ 
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
   }
+ 
 }
