@@ -1,10 +1,10 @@
 'use client'; // Thêm dòng này nếu bạn sử dụng các hook hoặc sự kiện liên quan đến client
 import "@/styles/home/news.css";
 import "@/styles/animation.css";
-import "./style.css";
 
 import useScrollEffect from "@/app/hook/useScrollEffect";
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
+
 export default function News() {
   useScrollEffect();
 
